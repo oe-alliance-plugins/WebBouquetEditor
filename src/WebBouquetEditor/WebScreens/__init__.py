@@ -1,2 +1,2 @@
-from .BouquetEditorWebScreens import BouquetEditorWebScreen
-from .AdditionalWebScreens import AdditionalWebScreen
+from .BouquetEditorWebScreens import BouquetEditorWebScreen  # noqa F401
+from .AdditionalWebScreens import AdditionalWebScreen  # noqa F401

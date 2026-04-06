@@ -1,6 +1,4 @@
-from __future__ import absolute_import
 # Plugin
-from Components.PluginComponent import plugins
 from Plugins.Plugin import PluginDescriptor
 # Webinterface
 from Plugins.Extensions.WebInterface.WebChilds.Toplevel import addExternalChild

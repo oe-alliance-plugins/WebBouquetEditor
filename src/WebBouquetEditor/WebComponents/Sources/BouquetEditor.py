@@ -1,20 +1,20 @@
-from __future__ import print_function
 from enigma import eServiceReference, eServiceCenter, eDVBDB
 from Components.Sources.Source import Source
-from Screens.ChannelSelection import service_types_tv, MODE_TV, MODE_RADIO
+from Screens.ChannelSelection import MODE_TV
 from Components.config import config
 from os import remove, path, popen
 from Screens.InfoBar import InfoBar
 from ServiceReference import ServiceReference
 from Components.ParentalControl import parentalControl
 
+from re import compile as re_compile
+from Components.NimManager import nimmanager
+
 IMG_WHITESERVICE = globals().get("IMG_WHITESERVICE", "IMG_WHITESERVICE")
 IMG_WHITEBOUQUET = globals().get("IMG_WHITEBOUQUET", "IMG_WHITEBOUQUET")
 IMG_BLACKSERVICE = globals().get("IMG_BLACKSERVICE", "IMG_BLACKSERVICE")
 IMG_BLACKBOUQUET = globals().get("IMG_BLACKBOUQUET", "IMG_BLACKBOUQUET")
 LIST_BLACKLIST = globals().get("LIST_BLACKLIST", "blacklist")
-from re import compile as re_compile
-from Components.NimManager import nimmanager
 
 
 class BouquetEditor(Source):
@@ -125,7 +125,7 @@ class BouquetEditor(Source):
 
 	def addProviderToBouquetlist(self, param):
 		print("[WebComponents.BouquetEditor] addProviderToBouquet with param = ", param)
-		refstr = sref = param["sProviderRef"]
+		refstr = param["sProviderRef"]
 		if refstr is None:
 			return (False, "No provider given!")
 		mode = MODE_TV  # init
@@ -571,7 +571,7 @@ class BouquetEditor(Source):
 				if not path.exists(arg):
 					return (False, "Error while preparing backup file, %s does not exists." % arg)
 				tarFiles += "%s " % arg
-			lines = popen("tar cvf %s %s" % (backupFilename, tarFiles)).readlines()
+			popen("tar cvf %s %s" % (backupFilename, tarFiles)).readlines()
 			remove(checkfile)
 			return (True, tarFilename)
 		else:

@@ -1,5 +1,4 @@
 from Components.Sources.Source import Source
-from enigma import eServiceCenter, eServiceReference
 from Components.ParentalControl import LIST_BLACKLIST
 from Components.config import config
 

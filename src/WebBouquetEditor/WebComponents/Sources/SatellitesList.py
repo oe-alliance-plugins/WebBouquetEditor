@@ -1,6 +1,6 @@
 from ... import _
 from Components.Sources.Source import Source
-from Screens.ChannelSelection import service_types_tv, service_types_radio, FLAG_SERVICE_NEW_FOUND, MODE_TV, MODE_RADIO
+from Screens.ChannelSelection import service_types_tv, service_types_radio, FLAG_SERVICE_NEW_FOUND, MODE_TV
 from enigma import eServiceReference, eServiceCenter
 from Components.SystemInfo import BoxInfo
 from Components.NimManager import nimmanager
