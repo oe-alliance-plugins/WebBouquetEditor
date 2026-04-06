@@ -1,0 +1,19 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "Extension for enigma2 webinterface to sort bouquets and other",
+  "description_recipe": "Extension for enigma2 webinterface to sort bouquets and other",
+  "history_source_dir": "webbouqueteditor",
+  "internal_package_name": "enigma2-plugin-extensions-webbouqueteditor",
+  "module_dir_name": "WebBouquetEditor",
+  "output_subdir": "webbouqueteditor",
+  "package_name": "enigma2-plugin-extensions-webbouqueteditor",
+  "plugin_src_rel": "webbouqueteditor",
+  "python_package": "WebBouquetEditor",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "WebBouquetEditor",
+  "rrecommends": "",
+  "rreplaces": "",
+  "selected_from_plugin_list": true
+}
