@@ -341,7 +341,7 @@ function EPGEvent(xml, number){
 		return h+":"+m;
 	};
 	this.getTimeDay = function() {
-		var weekday = ["So", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+		var weekday = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 		var wday = weekday[this.getTimeStart().getDay()];
 		var day = this.getTimeStart().getDate();
 		var month = this.getTimeStart().getMonth()+1;
@@ -623,8 +623,8 @@ function Movie(xml, cssclass){
 	};
 	
 	this.getTimeDay = function() {
-		var Wochentag = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
-		var wday = Wochentag[this.getTimeStart().getDay()];
+		var weekday = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
+		var wday = weekday[this.getTimeStart().getDay()];
 		var day = this.getTimeStart().getDate();
 		var month = this.getTimeStart().getMonth()+1;
 		var year = this.getTimeStart().getFullYear();
@@ -728,7 +728,7 @@ function Timer(xml, cssclass){
 	this.startprepare = getNodeContent(xml, 'e2startprepare');
 	this.justplay = getNodeContent(xml, 'e2justplay', '');
 	this.afterevent = getNodeContent(xml, 'e2afterevent', '0');
-	this.dirname = getNodeContent(xml, 'e2dirname', '/hdd/movie/');
+	this.dirname = getNodeContent(xml, 'e2dirname', '/media/hdd/movie/');
 	this.tags = getNodeContent(xml, 'e2tags', '');
 	this.logentries = getNodeContent(xml, 'e2logentries');
 	this.tfilename = getNodeContent(xml, 'e2filename');

@@ -50,8 +50,11 @@ class ServiceList(Source):
 					elif protection[1] == IMG_WHITEBOUQUET:
 						#(unlocked -B-)
 						isProtected = "5"
+			isStream = "0"
+			if item[0].getPath():
+				isStream = "1"
 
-			list.append((item[0].toString(), item[1], isGroup, isMarker, isProtected))
+			list.append((item[0].toString(),item[1],isGroup,isMarker,isProtected, isStream))
 		return list
 
 	def getServiceList(self):
@@ -81,4 +84,4 @@ class ServiceList(Source):
 			self.command_func(ref)
 
 	list = property(getServicesAsList)
-	lut = {"Reference": 0, "Name": 1, "isGroup": 2, "isMarker": 3, "isProtected": 4}
+	lut = {"Reference": 0, "Name": 1, "isGroup": 2, "isMarker": 3, "isProtected": 4, "isStream": 5}			
