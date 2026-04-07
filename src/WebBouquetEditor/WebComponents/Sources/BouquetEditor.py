@@ -397,7 +397,7 @@ class BouquetEditor(Source):
 				returnValue = self.addServiceToBouquet(new_param)
 				if returnValue[0]:
 					if editUrl:
-						return(True, "Service URL updated successfully.")
+						return (True, "Service URL updated successfully.")
 					return (True, "Service renamed successfully.")
 		return (False, "Service can not be renamed.")
 
